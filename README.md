@@ -64,7 +64,7 @@ policies             ["root"]
     ```
 - Enable new kv engine
     ```
-    vault secrets enable -version=2 -path=argocd kv
+    vault secrets enable -version=2 -path=dev kv
     ```
 - To list all your current secerets 
     ```
@@ -72,7 +72,7 @@ policies             ["root"]
     ```
 - Create test secert
     ```
-    vault kv put argocd/mysecret foo=bar
+    vault kv put dev/mysecret foo=bar
     ```
 - Enable approle at path approle
     ```
