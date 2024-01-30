@@ -126,3 +126,7 @@ policies             ["root"]
     ```
     vault kv get dev/mysecret
     ```
+### for sidecar injector use this blog
+
+https://developer.hashicorp.com/vault/tutorials/kubernetes/kubernetes-sidecar
+
