@@ -1,5 +1,5 @@
 # Install Vault 
-Follow Document [Run Vault on Kubernetes](https://developer.hashicorp.com/vault/docs/platform/k8s/helm/run#how-to) or Follow following commands 
+Follow Document [Run Vault on Kubernetes](https://developer.hashicorp.com/vault/docs/platform/k8s/helm/run#how-to) 
 ```bash
 helm repo add hashicorp https://helm.releases.hashicorp.com
 helm search repo hashicorp/vault
