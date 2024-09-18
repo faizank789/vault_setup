@@ -1,0 +1,18 @@
+----------------------------------------------------------create_Dummy_key----------------------------
+vault secrets enable -path=secret/ kv
+vault kv put secret/vault-root-token token="abc"
+
+---------------------------------------------------Ansible_sample_script--------------------
+- name: test
+  hosts: localhost
+  tasks:
+    - name: Reading data with community.hashi_vault.vault_read
+      community.hashi_vault.vault_read:
+        url: http://192.168.49.12
+        path: secret/vault-root-token
+        token: [your_vault_root_token]
+      register: secret_data
+    - name: Echo the specific key from secret_data
+      ansible.builtin.debug:
+        msg: "{{ secret_data.data.data.token }}"
+      when: secret_data.data is defined and 'data' in secret_data.data and 'token' in secret_data.data.data
