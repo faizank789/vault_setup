@@ -2,7 +2,10 @@
 vault secrets enable -path=secret/ kv
 vault kv put secret/vault-root-token token="abc"
 
----------------------------------------------------Ansible_sample_script--------------------
+--------------------------------------------------------------------------------------------------
+install hvac
+
+-------------------------------------------------Ansible_sample_script-------------------------------
 - name: test
   hosts: localhost
   tasks:
